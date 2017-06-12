@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% block content %}
+  <div>
+    <form action="{% url 'add' %}" method="post">
+      {% csrf_token %}
+      <label>Add new user:</label>
+      <input type="text" name="username" placeholder="username" required/>
+      <input type="password" name ="password" placeholder="password" required/>
+      <input type="date" name ="birthdate" placeholder="birthdate" required/>
+      <input type="submit"/>
+    </form>
+    <a href="{% url 'list_of_users' %}">Return</a>
+  </div>
+{% endblock content%}

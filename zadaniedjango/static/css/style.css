@@ -1,0 +1,27 @@
+div{
+  font-family: fantasy;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  color: #ffdc83;
+
+}
+table{
+  border: 1px solid #acb3db;
+  border-radius: 5px;
+  width: 100%;
+}
+
+table > tbody > tr > td{
+  height: 60px;
+  width: 13%;
+  border: 1px solid #e7584a;
+  border-radius: 5px;
+  background-color: #4a4848;
+}
+
+a{
+    text-decoration: none;
+    color: #9ad8e8;
+    padding-left: 30px;
+}

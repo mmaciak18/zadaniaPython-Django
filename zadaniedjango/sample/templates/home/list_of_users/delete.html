@@ -1,0 +1,12 @@
+{% extends './base.html' %}
+{% block content %}
+  <div>
+    <form action="{% url 'delete' %}?id={{ post.username }}" method="post">
+      {% csrf_token %}
+      <label>If you want to delete {{ post.username }}, type "delete" and submit.</label>
+      <input type=text name="apply" required/>
+      <input type="submit"/>
+    </form>
+    <a href="{% url 'list_of_users' %}">Return</a>
+  </div>
+{% endblock content%}

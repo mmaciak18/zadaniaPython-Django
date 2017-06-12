@@ -1,0 +1,12 @@
+{% extends './base.html' %}
+{% block content %}
+  <div>
+    <form action="{% url 'edit' %}?id={{ post.username }}" method="post">
+      {% csrf_token %}
+      <input type="text" placeholder="{{ post.username }}" name="username" required/>
+      <input type="date" placeholder="{{ post.birth_date }}" name ="birthdate" required/>
+      <input type="submit"/>
+    </form>
+    <a href="{% url 'list_of_users' %}">Return</a>
+  </div>
+{% endblock content%}

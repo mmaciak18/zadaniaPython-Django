@@ -1,0 +1,11 @@
+{% extends './base.html' %}
+{% block content %}
+  <div>
+    <ul>
+      <li>Username: {{ post.username }}</li>
+      <li>BirthDate: {{ post.birth_date }}</li>
+      <li>Random Number: {{ post.rand }}</li>
+    </ul>
+    <a href="{% url 'list_of_users' %}?id={{ user.username }}">Return</a>
+  </div>
+{% endblock content%}
